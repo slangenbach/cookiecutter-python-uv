@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "cookiecutter-poetry"
+version = "0.1.0"
+description = "Cookiecutter template for Python projects using poetry"
+authors = ["Stefan Langenbach <stefan@langenbach.online>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cookiecutter = "^2.3.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.286"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+select = ["E", "F", "I"]
+line-length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
