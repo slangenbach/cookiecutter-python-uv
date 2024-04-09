@@ -1,0 +1,1 @@
+"""Package-wide configuration."""
