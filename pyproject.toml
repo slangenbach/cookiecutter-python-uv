@@ -13,12 +13,11 @@ cookiecutter = "^2.3.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.286"
 
-[tool.black]
+[tool.ruff]
 line-length = 100
 
-[tool.ruff]
+[tool.ruff.lint]
 select = ["E", "F", "I"]
-line-length = 100
 
 [build-system]
 requires = ["poetry-core"]

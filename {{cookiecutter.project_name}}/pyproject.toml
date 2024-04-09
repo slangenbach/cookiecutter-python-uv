@@ -13,21 +13,18 @@ packages = [
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
+ruff = "^0.0.282"
 pytest = "^7.4.0"
 ipykernel = "^6.25.0"
-black = "^23.7.0"
-ruff = "^0.0.282"
-nbqa = "^1.7.0"
 nbconvert = "^7.7.3"
 
-[tool.black]
-line-length = 100
-
 [tool.ruff]
-select = ["E", "F", "I"]
 line-length = 100
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]
 
 [build-system]
