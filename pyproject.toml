@@ -12,6 +12,7 @@ cookiecutter = "^2.3.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.286"
+pre-commit = "^3.7.0"
 
 [tool.ruff]
 line-length = 100
