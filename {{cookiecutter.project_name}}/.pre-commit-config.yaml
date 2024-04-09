@@ -4,6 +4,7 @@ repos:
   hooks:
     - id: check-json
       name: Check JSON files
+      exclude: ^\.vscode/
     - id: check-yaml
       name: Check YAML files
     - id: check-toml
