@@ -8,9 +8,9 @@
     "customizations": {
         "extensions": [
             "njpwerner.autodocstring",
-            "ms-python.black-formatter",
             "streetsidesoftware.code-spell-checker",
             "Codeium.codeium",
+            "github.vscode-github-actions",
             "ms-toolsai.jupyter",
             "ms-python.python",
             "ms-python.vscode-pylance",

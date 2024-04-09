@@ -9,7 +9,6 @@
     "customizations": {
         "extensions": [
             "njpwerner.autodocstring",
-            "ms-python.black-formatter",
             "streetsidesoftware.code-spell-checker",
             "Codeium.codeium",
             "ms-toolsai.jupyter",
