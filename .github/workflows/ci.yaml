@@ -25,7 +25,9 @@ jobs:
               run: poetry install --with dev
 
             - name: Run linters
-              run: poetry run pre-commit run all-files
+              env:
+                SKIP: poetry-lock
+              run: poetry run pre-commit run --all-files
 
             - name: Run tests
               run: poetry run pytest
