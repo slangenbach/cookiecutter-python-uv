@@ -37,7 +37,7 @@ repos:
 - repo: local
   hooks:
     - id: nbconvert
-      name: nbconvert
+      name: Strip output of Jupyter notebooks
       stages: [commit]
       entry: jupyter nbconvert
       args: [--clear-output, --inplace]

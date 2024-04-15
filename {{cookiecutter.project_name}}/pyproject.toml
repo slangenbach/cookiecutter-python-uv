@@ -23,10 +23,11 @@ pre-commit = "^3.7.0"
 line-length = 100
 
 [tool.ruff.lint]
-select = ["E", "F", "I"]
+select = ["B", "D", "E", "F", "I", "S"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]
+"__init__.py" = ["D104"]
 
 [build-system]
 requires = ["poetry-core"]
