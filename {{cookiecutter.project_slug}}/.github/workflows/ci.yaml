@@ -23,13 +23,11 @@ jobs:
             - name: Install dependencies
               run: uv sync
 
-            - name: Cache pre-commit
-              uses: actions/cache@v3
+            - name: Cache pre-commit environment
+              uses: actions/cache@v4
               with:
                 path: ~/.cache/pre-commit
-                key: ${{ runner.os }}-pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
-                restore-keys: |
-                  ${{ runner.os }}-pre-commit-
+                key: {% raw %}pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}{% endraw %}
 
             - name: Run linters
               run: uv run pre-commit run --all-files

@@ -1,7 +1,8 @@
 {
     "project_name": "My package",
     "project_description": "My package description",
-    "package_name": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
+    "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '-')}}",
+    "package_name": "{{cookiecutter.project_slug|replace('-', '_')}}",
     "author": "Stefan Langenbach",
     "email": "stefan@langenbach.online"
 }
