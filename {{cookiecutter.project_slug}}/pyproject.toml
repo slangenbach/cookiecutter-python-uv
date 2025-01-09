@@ -1,34 +1,59 @@
-[tool.poetry]
-name = "{{cookiecutter.project_name}}"
-version = "0.0.1"
+[project]
+name = "{{cookiecutter.project_slug}}"
+version = "0.1.0"
 description = "{{cookiecutter.project_description}}"
-authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
-license = "MIT"
 readme = "README.md"
-packages = [
-    {include = "{{cookiecutter.package_name}}"}
+requires-python = ">=3.12"
+dependencies = [
 ]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.0.282"
-pytest = "^7.4.0"
-ipykernel = "^6.25.0"
-nbconvert = "^7.7.3"
-pre-commit = "^3.7.0"
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "nbconvert>=7.16.4",
+    "pre-commit>=4.0.1",
+    "pytest-mock>=3.14.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+]
 
 [tool.ruff]
 line-length = 100
 
 [tool.ruff.lint]
-select = ["B", "D", "E", "F", "I", "S"]
+select = [
+    "B",    # flake8-bugbear
+    "BLE",  # flake8-blind-except
+    "D",    # pydocstyle
+    "DTZ",  # flake8-datetimez
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "PT",   # flake8-pytest-style
+    "PTH",  # flake8-use-pathlib
+    "S",    # flake8-bandit
+    "UP",   # pyupgrade
+]
+ignore = ["D203", "D212"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["S101"]
 "__init__.py" = ["D104"]
+"tests/*" = ["S101", "D100", "D103"]
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --strict-markers --cov --cov-report=term"
+markers = [
+    "local: marks tests as running locally only (deselect with '-m \"not local\"')"
+]
+xfail_strict = true
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.coverage.report]
+fail_under = 80

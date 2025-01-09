@@ -1,16 +1,14 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+    "image": "mcr.microsoft.com/devcontainers/python:0-3.13-bullseye",
     "features": {
-        "ghcr.io/devcontainers-contrib/features/poetry:2": {},
+        "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {},
         "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
         "ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {}
     },
     "postCreateCommand": "poetry install",
     "customizations": {
         "extensions": [
-            "njpwerner.autodocstring",
             "streetsidesoftware.code-spell-checker",
-            "Codeium.codeium",
             "ms-toolsai.jupyter",
             "ms-python.python",
             "ms-python.vscode-pylance",
