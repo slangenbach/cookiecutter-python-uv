@@ -5,29 +5,23 @@ on: [push]
 jobs:
     build:
         runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                python-version: ["3.11", "3.12"]
         steps:
             - name: Check out source code
               uses: actions/checkout@v4
 
-            - name: Install poetry
-              run: pipx install poetry
+            - name: Install uv
+              uses: astral-sh/setup-uv@v4
 
             - name: Set up Python
               uses: actions/setup-python@v5
               with:
-                  python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
-                  cache: "poetry"
+                python-version-file: ".python-version"
 
             - name: Install dependencies
-              run: poetry install --with dev
+              run: uv sync
 
             - name: Run linters
-              env:
-                SKIP: poetry-lock
-              run: poetry run pre-commit run --all-files
+              run: uv run pre-commit run --all-files
 
             - name: Run tests
-              run: poetry run pytest
+              run: uv run pytest
