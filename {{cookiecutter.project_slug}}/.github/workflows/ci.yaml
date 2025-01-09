@@ -18,7 +18,7 @@ jobs:
             - name: Set up Python
               uses: actions/setup-python@v5
               with:
-                  python-version-file: ".python-version"
+                python-version-file: ".python-version"
 
             - name: Install dependencies
               run: uv sync
@@ -27,7 +27,7 @@ jobs:
               uses: actions/cache@v4
               with:
                 path: ~/.cache/pre-commit
-                key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+                key: {% raw %}pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}{% endraw %}
 
             - name: Run linters
               run: uv run pre-commit run --all-files

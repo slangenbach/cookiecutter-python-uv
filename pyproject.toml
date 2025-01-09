@@ -1,26 +1,26 @@
-[tool.poetry]
-name = "cookiecutter-poetry"
-version = "0.1.0"
-description = "Cookiecutter template for Python projects using poetry"
-authors = ["Stefan Langenbach <stefan@langenbach.online>"]
-license = "MIT"
+[project]
+name = "cookiecutter-uv"
+version = "0.2.0"
+description = "Cookiecutter template for Python using uv"
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.12"
+dependencies = [
+    "cookiecutter>=2.6.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-cookiecutter = "^2.3.0"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.0.286"
-pre-commit = "^3.7.0"
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0.1",
+    "pytest>=8.3.4",
+]
 
 [tool.ruff]
 line-length = 100
 
 [tool.ruff.lint]
-select = ["E", "F", "I"]
+select = ["E", "F", "D", "I", "PT"]
+ignore = ["D203", "D212"]
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["D104"]
+"tests/*" = ["S101", "D100", "D103"]
