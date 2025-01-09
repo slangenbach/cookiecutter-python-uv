@@ -1,6 +1,6 @@
 # cookiecutter-python-uv
 
-[![GitHub Actions](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/main.yml/badge.svg)](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/main.yml)
+[![GitHub Actions](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/main.yml/badge.svg)](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/ci.yml)
 
 [Cookiecutter][1] template for Python projects using [uv][2]
 
