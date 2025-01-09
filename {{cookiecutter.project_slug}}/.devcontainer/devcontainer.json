@@ -5,7 +5,7 @@
         "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
         "ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {}
     },
-    "postCreateCommand": "poetry install",
+    "postCreateCommand": "uv sync",
     "customizations": {
         "extensions": [
             "streetsidesoftware.code-spell-checker",
