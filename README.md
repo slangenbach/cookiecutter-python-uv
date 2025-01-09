@@ -2,6 +2,8 @@
 
 [![GitHub Actions](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/main.yml/badge.svg)](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/main.yml)
 
+[Cookiecutter][1] template for Python projects using [uv][2]
+
 - Flexible project structure using the [src layout][3]
 - Python version and Python dependency management with [uv][2]
 - Code linting and formatting with [ruff][4]
