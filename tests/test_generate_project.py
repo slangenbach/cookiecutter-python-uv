@@ -16,4 +16,4 @@ def test_generate_project(tmp_path: Path):
     )
 
     assert tmp_path.joinpath(PROJECT_SLUG).exists()
-    assert tmp_path.joinpath(f"{PROJECT_SLUG}/test_project").exists()
+    assert tmp_path.joinpath(f"{PROJECT_SLUG}/src/test_project").exists()
