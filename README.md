@@ -1,6 +1,6 @@
 # cookiecutter-python-uv
 
-[Cookiecutter][1] template for Python projects using [uv][2]
+[Cookiecutter][1] template for Python projects using [uv][2] featuring:
 
 - Flexible project structure using the [src layout][3]
 - Python version and Python dependency management with [uv][2]
@@ -22,6 +22,22 @@ Install [Cookiecutter][1] via uv: `uv tool install cookiecutter`
 ## Usage
 
 Generate the project structure via `uv tool run cookiecutter https://github.com/slangenbach/cookiecutter-python-uv`
+
+```
+|- .devcontainer/                   <- devcontainer configuration
+|- .github/                         <- GitHub Actions workflows
+|- .vscode/                         <- VSCode configuration
+|- data/                            <- Data for debugging and testing
+|- notebooks/                       <- Jupyter notebooks
+|- src/                             <- Source code
+|- tests/                           <- Tests
+|- .gitignore                       <- Files ignored by git
+|- .pre-commit-config.yaml          <- pre-commit configuration
+|- .python-version                  <- Python version used by package
+|- pyproject.toml                   <- Package and tooling configuration
+|- README.md                        <- Top-level README
+|- uv.lock                          <- uv lock file
+```
 
 ## Contributing
 
