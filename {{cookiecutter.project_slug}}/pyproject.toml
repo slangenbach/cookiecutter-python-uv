@@ -17,6 +17,9 @@ dev = [
     "pytest-cov>=6.0.0",
 ]
 
+[tool.uv]
+package = true
+
 [tool.ruff]
 line-length = 100
 
