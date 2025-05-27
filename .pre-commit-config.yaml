@@ -1,29 +1,29 @@
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v5.0.0
-  hooks:
-    - id: check-json
-      name: Check JSON files
-      exclude: (^|/)\.(vscode|devcontainer)/
-    - id: check-yaml
-      name: Check YAML files
-      exclude: ci.yaml
-    - id: check-toml
-      name: Check TOML files
-    - id: end-of-file-fixer
-      name: Ensure proper file endings
-    - id: trailing-whitespace
-      name: Remove unnecessary whitespace from code
-      args: [--markdown-linebreak-ext=md]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-json
+        name: Check JSON files
+        exclude: (^|/)\.(vscode|devcontainer)/
+      - id: check-yaml
+        name: Check YAML files
+        exclude: ci.yml
+      - id: check-toml
+        name: Check TOML files
+      - id: end-of-file-fixer
+        name: Ensure proper file endings
+      - id: trailing-whitespace
+        name: Remove unnecessary whitespace from code
+        args: [--markdown-linebreak-ext=md]
 
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.11.11
-  hooks:
-    - id: ruff
-      name: Lint Python code with ruff
-      types_or: [python, pyi, jupyter]
-      args: [--fix, "--config", "pyproject.toml"]
-    - id: ruff-format
-      name: Format Python code with ruff
-      types_or: [python, pyi, jupyter]
-      args: ["--config", "pyproject.toml"]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.11
+    hooks:
+      - id: ruff
+        name: Lint Python code with ruff
+        types_or: [python, pyi, jupyter]
+        args: [--fix, "--config", "pyproject.toml"]
+      - id: ruff-format
+        name: Format Python code with ruff
+        types_or: [python, pyi, jupyter]
+        args: ["--config", "pyproject.toml"]
