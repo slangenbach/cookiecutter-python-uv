@@ -28,6 +28,13 @@ repos:
 
   - repo: local
     hooks:
+      - id: ty
+        name: Type check Python code with ty
+        entry: uv run ty check
+        language: python
+
+  - repo: local
+    hooks:
       - id: nbconvert
         name: Strip output of Jupyter notebooks
         stages: [commit]

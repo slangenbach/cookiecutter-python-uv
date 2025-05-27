@@ -27,3 +27,10 @@ repos:
         name: Format Python code with ruff
         types_or: [python, pyi, jupyter]
         args: ["--config", "pyproject.toml"]
+
+  - repo: local
+    hooks:
+      - id: ty
+        name: Type check Python code with ty
+        entry: uv run ty check
+        language: python

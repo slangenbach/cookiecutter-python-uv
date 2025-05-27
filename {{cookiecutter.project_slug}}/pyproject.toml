@@ -16,6 +16,7 @@ dev = [
     "pytest-mock>=3.14.0",
     "pytest>=8.3.4",
     "pytest-cov>=6.0.0",
+    "ty>=0.0.1a7",
 ]
 
 [tool.uv]
