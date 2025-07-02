@@ -1,0 +1,20 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  setup:
+    cmds:
+      - uv sync --all-groups --all-extras
+      - uv run pre-commit install
+    desc: "Setup development environment"
+
+  lint:
+    cmds:
+      - uv run pre-commit run --all-files
+    desc: "Run linters"
+
+  test:
+    cmds:
+      - uv run pytest
+    desc: "Run tests"
