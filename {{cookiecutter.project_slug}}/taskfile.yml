@@ -42,3 +42,13 @@ tasks:
     cmds:
       - uv run pytest
     desc: "Run tests"
+
+  bump-version:
+    cmds:
+      - {% raw %}uv version --bump {{.BUMP}}{% endraw %}
+      - git tag v$(uv version --short)
+    requires:
+      vars:
+        - name: BUMP
+          enum: [patch, minor, major]
+    desc: "Bump project version"

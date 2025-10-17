@@ -1,13 +1,13 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-json
         name: Check JSON files
         exclude: (^|/)\.(vscode|devcontainer)/
       - id: check-yaml
         name: Check YAML files
-        exclude: ci.yml
+        exclude: ci.yml|taskfile.yml
       - id: check-toml
         name: Check TOML files
       - id: end-of-file-fixer
@@ -17,7 +17,7 @@ repos:
         args: [--markdown-linebreak-ext=md]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.11
+    rev: v0.14.1
     hooks:
       - id: ruff
         name: Lint Python code with ruff
