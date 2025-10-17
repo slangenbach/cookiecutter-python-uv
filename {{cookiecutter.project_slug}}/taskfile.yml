@@ -45,7 +45,7 @@ tasks:
 
   bump-version:
     cmds:
-      - uv version --bump {{.BUMP}}
+      - {% raw %}uv version --bump {{.BUMP}}{% endraw %}
       - git tag v$(uv version --short)
     requires:
       vars:

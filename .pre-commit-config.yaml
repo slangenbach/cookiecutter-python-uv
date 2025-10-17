@@ -7,7 +7,7 @@ repos:
         exclude: (^|/)\.(vscode|devcontainer)/
       - id: check-yaml
         name: Check YAML files
-        exclude: ci.yml
+        exclude: ci.yml|taskfile.yml
       - id: check-toml
         name: Check TOML files
       - id: end-of-file-fixer
