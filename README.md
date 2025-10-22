@@ -24,6 +24,8 @@ Install [cruft][10] via uv: `uv tool install cruft`
 
 ## Usage
 
+### Generate project
+
 Generate the project structure via `uv tool run cruft create https://github.com/slangenbach/cookiecutter-python-uv`
 
 ```
@@ -46,13 +48,13 @@ Generate the project structure via `uv tool run cruft create https://github.com/
 |- uv.lock                          <- uv lock file
 ```
 
+### Update project
+
+Update a project created using cruft via `uv tool run cruft update`
+
 ## Contributing
 
-1. Create a dedicated branch
-1. Add your contribution
-1. Run linters: `task lint`
-1. Run tests: `task test`
-1. Commit, push and create a merge request
+Check out [Contributing](CONTRIBUTING.md) for further information.
 
 
 [1]: https://github.com/cookiecutter/cookiecutter
