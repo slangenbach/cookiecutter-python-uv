@@ -1,6 +1,6 @@
 # cookiecutter-python-uv
 
-![CI](https://github.com/slangenbach/{{cookiecutter.project_slug}}/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/slangenbach/cookiecutter-python-uv/actions/workflows/ci.yml/badge.svg)
 
 [Cookiecutter][1] template for Python projects using [uv][2] featuring:
 
@@ -33,6 +33,7 @@ Generate the project structure via `uv tool run cruft create https://github.com/
 |- .github/                         <- GitHub Actions workflows
 |- .vscode/                         <- VSCode configuration
 |- data/                            <- Data for debugging and testing
+|- infra/                           <- Infrastructure-as-Code
 |- notebooks/                       <- Jupyter notebooks
 |- src/                             <- Source code
 |- tests/                           <- Tests
@@ -53,7 +54,7 @@ Update a project created using cruft via `uv tool run cruft update`
 
 ## Contributing
 
-Check out [Contributing](Contributing.md) for further information.
+Check out [Contributing](CONTRIBUTING.md) for further information.
 
 
 [1]: https://github.com/cookiecutter/cookiecutter
