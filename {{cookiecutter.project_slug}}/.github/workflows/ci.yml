@@ -20,8 +20,11 @@ jobs:
               with:
                 python-version-file: ".python-version"
 
+            - name: Install Task
+              uses: go-task/setup-task@v1
+
             - name: Install dependencies
-              run: uv sync
+              run: task setup
 
             - name: Cache pre-commit environment
               uses: actions/cache@v4
@@ -30,7 +33,7 @@ jobs:
                 key: {% raw %}pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}{% endraw %}
 
             - name: Run linters
-              run: uv run pre-commit run --all-files
+              run: task lint
 
             - name: Run tests
-              run: uv run pytest
+              run: task test
