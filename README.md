@@ -24,6 +24,8 @@ Install [cruft][10] via uv: `uv tool install cruft`
 
 ## Usage
 
+### Generate project
+
 Generate the project structure via `uv tool run cruft create https://github.com/slangenbach/cookiecutter-python-uv`
 
 ```
@@ -44,6 +46,10 @@ Generate the project structure via `uv tool run cruft create https://github.com/
 |- taskfile.yml                     <- Taskfile
 |- uv.lock                          <- uv lock file
 ```
+
+### Update project
+
+Update a project created using cruft via `uv tool run cruft update`
 
 ## Contributing
 
