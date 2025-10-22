@@ -1,5 +1,7 @@
 # cookiecutter-python-uv
 
+![CI](https://github.com/slangenbach/{{cookiecutter.project_slug}}/actions/workflows/ci.yml/badge.svg)
+
 [Cookiecutter][1] template for Python projects using [uv][2] featuring:
 
 - Flexible project structure using the [src layout][3]
