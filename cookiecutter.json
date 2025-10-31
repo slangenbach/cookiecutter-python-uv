@@ -4,5 +4,6 @@
     "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '-')}}",
     "package_name": "{{cookiecutter.project_slug|replace('-', '_')}}",
     "author": "Stefan Langenbach",
-    "email": "stefan@langenbach.online"
+    "email": "stefan@langenbach.online",
+    "deploy_to_pypi": false
 }
