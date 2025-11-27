@@ -3,28 +3,45 @@
 version: "3"
 
 tasks:
+  default:
+    cmds:
+      - task --list
+
+  install-pre-commit:
+    cmds:
+      - uv tool install pre-commit
+      - uv tool run pre-commit install
+    status:
+      - test -f .git/hooks/pre-commit
+    internal: true
+
   setup:
     cmds:
+      - task: install-pre-commit
       - uv sync --all-groups --all-extras
-      - uv run pre-commit install
-    desc: "Setup development environment"
+    desc: Setup development environment
 
   lint:
     cmds:
-      - uv run pre-commit run --all-files
-    desc: "Run linters"
+      - uv tool run pre-commit run --all-files
+    desc: Run linters
 
   test:
     cmds:
       - uv run pytest
-    desc: "Run tests"
+    desc: Run tests
 
   bump-version:
     cmds:
       - uv version --bump {{.BUMP}}
-      - git tag v$(uv version --short)
     requires:
       vars:
         - name: BUMP
           enum: [patch, minor, major]
-    desc: "Bump project version"
+    desc: Bump project version
+
+  create-git-tag:
+    cmds:
+      - git tag v$(uv version --short)
+      - git push --tags
+    desc: Create and push a git tag for the current version
