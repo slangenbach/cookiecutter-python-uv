@@ -1,6 +1,12 @@
 # {{cookiecutter.project_name}}
 
 ![CI](https://github.com/slangenbach/{{cookiecutter.project_slug}}/actions/workflows/ci.yml/badge.svg)
+{%- if cookiecutter.deploy_to_gh %}
+![Github](https://github.com/slangenbach/{{cookiecutter.project_slug}}/actions/workflows/release_to_gh.yml/badge.svg)
+{%- endif %}
+{%- if cookiecutter.deploy_to_pypi %}
+![PyPI](https://github.com/slangenbach/{{cookiecutter.project_slug}}/actions/workflows/release_to_pypi.yml/badge.svg)
+{%- endif %}
 
 {{cookiecutter.project_description}}
 
