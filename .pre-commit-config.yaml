@@ -34,3 +34,4 @@ repos:
         name: Type check Python code with ty
         entry: uv run ty check
         language: python
+        types_or: [python]
