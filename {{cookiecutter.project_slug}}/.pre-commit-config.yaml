@@ -37,8 +37,8 @@ repos:
     hooks:
       - id: nbconvert
         name: Strip output of Jupyter notebooks
-        stages: [commit]
-        entry: jupyter nbconvert
+        stages: [pre-commit]
+        entry: uv run jupyter nbconvert
         args: [--clear-output, --inplace]
         language: system
         files: \.ipynb$
