@@ -12,6 +12,7 @@
 - Automated quality assurance with [pre-commit][6]
 - CICD with [GitHub Actions][7]
 - Task management using [Task][9]
+- Custom instructions for [GitHub Copliot][11] based on [George Polya's "How to Solve It"][12]
 
 ## Prerequisites
 
@@ -67,3 +68,5 @@ Check out [Contributing](CONTRIBUTING.md) for further information.
 [8]: https://github.com/astral-sh/ty
 [9]: https://taskfile.dev/
 [10]: https://cruft.github.io/cruft/
+[11]: https://github.com/features/copilot
+[12]: https://gist.github.com/jph00/d60301884c56fe063101a7cc6193b3af
