@@ -1,6 +1,6 @@
 ---
 name: plan
-description: Step 2 - Devise a plan
+description: Devise a plan
 agent: ask
 ---
 Help me devise a plan for the problem we've been discussing:

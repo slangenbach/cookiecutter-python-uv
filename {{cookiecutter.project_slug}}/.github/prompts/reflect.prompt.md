@@ -1,6 +1,6 @@
 ---
 name: reflect
-description: Step 4 - Look back and review
+description: Look back and review
 agent: ask
 ---
 Let's reflect on what we just built:
