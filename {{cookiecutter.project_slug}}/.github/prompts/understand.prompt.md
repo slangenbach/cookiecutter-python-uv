@@ -1,6 +1,6 @@
 ---
 name: understand
-description: Step 1 - Help me understand the problem
+description: Help me understand the problem
 agent: ask
 ---
 Help me understand this problem before I try to solve it.

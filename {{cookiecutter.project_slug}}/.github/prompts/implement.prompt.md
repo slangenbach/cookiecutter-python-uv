@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Step 3 - Execute one small step
+description: Execute one small step
 agent: ask
 ---
 Guide me through the next small implementation step:

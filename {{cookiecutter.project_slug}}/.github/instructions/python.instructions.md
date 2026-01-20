@@ -6,7 +6,7 @@ applyTo: "**/*.py"
 ## Tooling & Tasks
 This project uses uv (package manager), ruff (linting/formatting), ty (type checking), pytest (testing) and taskfile (task runner).
 
-- task setup - Setup dev environment  
+- task setup - Setup dev environment
 - task lint - Run ruff and other linters via pre-commit
 - task test - Run pytest via uv
 
@@ -22,6 +22,13 @@ This project uses uv (package manager), ruff (linting/formatting), ty (type chec
 - constants.py - ROOT_PATH, DATA_PATH, and project constants
 - errors.py - Custom exceptions inheriting from CustomError
 - logger.py - Use get_logger(__name__) for logging
+- utils.py - General utility functions shared across modules
+
+## Adding Features
+When adding significant functionality, create a submodule:
+- Create directory in src/package_name/, e.g. src/package_name/ai/
+- Add __init__.py to make it importable
+- Group related modules within the submodule
 
 ## Environment Variables
 Settings use Pydantic Settings loaded from .env. When adding a new setting:
