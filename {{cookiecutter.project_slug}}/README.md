@@ -10,6 +10,12 @@
 
 {{cookiecutter.project_description}}
 
+![Logo](assets/logo.png)
+
+## About
+
+tbd
+
 ## Prerequisites
 
 - [uv][1]
