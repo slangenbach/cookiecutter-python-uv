@@ -1,5 +1,7 @@
 # AGENTS.md
 
+This repository is a Cookiecutter template for Python projects using uv, ruff and ty.
+
 ## Agent skills
 
 ### Issue tracker
