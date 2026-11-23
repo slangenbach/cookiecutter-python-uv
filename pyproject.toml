@@ -13,7 +13,7 @@ dev = [
     "pre-commit>=4.6.2",
     "pydantic-settings>=2.14.2",
     "pytest>=9.1.1",
-    "ty>=0.0.86",
+    "ty>=0.0.107",
 ]
 
 [tool.ruff]
